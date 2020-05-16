@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "alias": "Fetch",
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+    }
+  ],
+  "routes": [
+    {
+      "src": "/_nuxt/.+",
+      "headers": { "Cache-Control": "max-age=31557600" }
+    },
+    { "src": "/(.*)", "dest": "/" }
+  ]
+}
